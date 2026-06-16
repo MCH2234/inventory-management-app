@@ -1,0 +1,17 @@
+.flex {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+}
+.col {
+  flex-direction: column;
+}
+.sec-container {
+  width: 100vw;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.card {
+  border: 0.5px solid black;
+}
