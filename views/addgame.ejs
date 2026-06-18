@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <% if(valError!==null){%>
+        <ul>
+            <% for(error of valError){ %>
+                <li><%=error.msg %></li>
+            <%}%>
+        </ul>
+
+    <%}%>
+    <% if(errors!==null){ %>
+        <p><%=errors%> is already part of the database!</p>
+    <%} %>
+    <form method="post">
+      <label for="game">Add game:</label>
+      <input type="text" name="game" id="game" minlength="1" />
+      <label for="price">Price:</label>
+      <input type="number" name="price" id="price" min="0" />
+      <label for="genre">Genre :</label>
+      <select name="genre">
+        <% for(genre of genres){ %>
+            <option value="<%=genre%>"><%=genre %></option>
+     <%   } %>
+      </select>
+      <button>Submit</button>
+    </form>
+    <a href="/">Go back</a>
+  </body>
+</html>

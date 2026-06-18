@@ -1,5 +1,7 @@
 const { Pool } = require("pg");
+const process = require("process");
 
+process.loadEnvFile();
 module.exports = new Pool({
-  connectionString: "postgresql://mch332@localhost:5432/inventory",
+  connectionString: process.env.db_URI,
 });

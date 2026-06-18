@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre Id</th>
+            <th></th>
+        </tr>
+            <% for(game of games){%>
+                <tr>
+                    <td><%=game.name %></td>
+                    <td><%=game.price %></td>
+                    <td><%=game.genre_id %></td>
+                    <td><form action="/tables/games/delete/<%=game.name %>" method="post"><button>Delete</button></form></td>
+                </tr>
+  <%  }%>
+    </table>
+    <a href = '/'>Go back</a>
+</body>
+</html>
